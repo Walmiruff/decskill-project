@@ -28,9 +28,12 @@
 							"projects/host/src/assets"
 						],
 						"styles": [
-							"projects/host/src/styles.scss"
+							"projects/host/src/styles.scss",
+							"node_modules/bootstrap/dist/css/bootstrap.min.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"node_modules/bootstrap/dist/js/bootstrap.min.js"
+						],
 						"extraWebpackConfig": "projects/host/webpack.config.js",
 						"commonChunk": false
 					},
@@ -108,7 +111,9 @@
 						"styles": [
 							"projects/host/src/styles.scss"
 						],
-						"scripts": []
+						"scripts": [
+							"node_modules/bootstrap/dist/js/bootstrap.min.js"
+						]
 					}
 				}
 			}
