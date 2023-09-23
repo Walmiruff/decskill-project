@@ -12,6 +12,13 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "dcsk": [
+        "dist/components",
+        "dist/security",
+        "dist/store"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
