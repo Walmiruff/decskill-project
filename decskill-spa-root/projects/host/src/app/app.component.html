@@ -1,11 +1,12 @@
 <!-- app.component.html -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-2 d-none d-md-block sidebar">
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
             <dcsk-sidebar></dcsk-sidebar>
         </div>
-        <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="col py-3">
             <router-outlet></router-outlet>
         </div>
-    </div>   
+    </div>
 </div>
+      
