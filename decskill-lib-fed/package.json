@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build ",
+    "build": "ng build",
+    "build-libs": "bash pack.sh",
     "build:lib-store": "ng build @dcsk/store",
     "build:lib-components": "ng build @dcsk/components",
     "build:lib-security": "ng build @dcsk/security",
