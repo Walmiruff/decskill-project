@@ -1,4 +1,11 @@
-<h1>Twitter</h1>
-<a routerLink="/">REMOTE 1</a> &nbsp;
-<a routerLink="/explore">REMOTE 2</a>
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block sidebar">
+           <!-- <dck-sidebar></dck-sidebar> -->
+        </div>
+        <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>   
+</div>
