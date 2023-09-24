@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public user$!: Observable<IUser>;
+  public userActive$!: Observable<IUser>;
 
   private user1: IUser = {
         id: 1,
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
     ) { }
 
   public ngOnInit(): void {
-    this.user$ = this.storeService.getUser();
+    this.userActive$ = this.storeService.getUser();
   }
 
   public navigateToNewRoute(ev: string) {

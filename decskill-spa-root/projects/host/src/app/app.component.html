@@ -1,8 +1,8 @@
 <!-- app.component.html -->
 <div class="container-fluid">
     <div class="row flex-nowrap">
-        <div *ngIf="user$ | async as userActive" class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
-            <dcsk-sidebar [user]="userActive"  (eventRouter)="navigateToNewRoute($event)" (changeUser)="changeUser($event)"></dcsk-sidebar>
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
+            <dcsk-sidebar [user$]="userActive$"  (eventRouter)="navigateToNewRoute($event)" (changeUser)="changeUser($event)"></dcsk-sidebar>
         </div>
         <div class="col py-3">
             <router-outlet></router-outlet>

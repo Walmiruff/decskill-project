@@ -1,21 +1,19 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IUser } from '@dcsk/store';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { IUser } from '../models/user.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'dcsk-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
 
-  @Input() user!: IUser; 
+  @Input() user$!: Observable<IUser>;
   @Output() eventRouter = new EventEmitter<string>();
   @Output() changeUser = new EventEmitter<number>();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onClick(ev: string) {
     this.eventRouter.emit(ev);
