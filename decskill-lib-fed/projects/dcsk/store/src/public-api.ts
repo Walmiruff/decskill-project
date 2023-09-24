@@ -2,6 +2,7 @@
  * Public API Surface of store
  */
 
+export * from './lib/service/store.service';
 export * from './lib/selectors/post_selector';
 export * from './lib/reducers/post_reducer';
 export * from './lib/actions/post_action';

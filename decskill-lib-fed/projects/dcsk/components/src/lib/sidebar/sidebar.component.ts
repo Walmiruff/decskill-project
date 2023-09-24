@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IUser } from '@dcsk/store';
 
 @Component({
   selector: 'dcsk-sidebar',
@@ -7,7 +8,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  @Input() user!: IUser; 
   @Output() eventRouter = new EventEmitter<string>();
+  @Output() changeUser = new EventEmitter<number>();
 
   constructor() { }
 
@@ -16,6 +19,10 @@ export class SidebarComponent implements OnInit {
 
   onClick(ev: string) {
     this.eventRouter.emit(ev);
+  }
+
+  onChangeUser(ev: number) {
+    this.changeUser.emit(ev);
   }
 
 }
