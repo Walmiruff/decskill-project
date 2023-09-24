@@ -10,5 +10,5 @@ build_and_pack() {
 
 # Construir e empacotar as bibliotecas
 build_and_pack "components"
-#build_and_pack "store"
-#build_and_pack "security"
+build_and_pack "store"
+build_and_pack "security"

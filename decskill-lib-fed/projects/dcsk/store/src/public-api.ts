@@ -2,6 +2,9 @@
  * Public API Surface of store
  */
 
-export * from './lib/store.service';
-export * from './lib/store.component';
-export * from './lib/store.module';
+export * from './lib/selectors/post_selector';
+export * from './lib/reducers/post_reducer';
+export * from './lib/actions/post_action';
+export * from './lib/models/user.model';
+export * from './lib/models/post.model';
+export * from './lib/store-dcsk.module';
