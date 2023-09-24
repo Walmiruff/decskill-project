@@ -8,13 +8,14 @@ export const adapter: EntityAdapter<IPost> = createEntityAdapter<IPost>();
 
 export interface PostState extends EntityState<IPost> { }
 
-export const initialPostState: PostState = adapter.getInitialState({
-    id: '1',
-    userId: '@anyuser',
-    content: 'content test',
-    date: new Date()
-});
-
+export const initialPostState: PostState = adapter.getInitialState(
+    {
+        id: '1',
+        userId: '@anyuser',
+        content: 'content test',
+        date: new Date()
+    }
+);
 
 export function PostReducer(state = initialPostState, action: PostAction): PostState {
     switch (action.type) {

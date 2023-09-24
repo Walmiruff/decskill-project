@@ -3,5 +3,6 @@
   "dest": "../../../dist/dcsk/store",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["."]
 }

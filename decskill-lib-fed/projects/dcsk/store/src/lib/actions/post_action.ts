@@ -1,5 +1,4 @@
 import { Action } from '@ngrx/store';
-import { Update } from '@ngrx/entity';
 
 import { IPost } from '../models/post.model'; 
 
@@ -36,7 +35,7 @@ export class UPDATEPOST implements Action {
 
 export class REMOVEPOST implements Action{
     readonly type = PostActionTypes.REMOVEPOST;
-    constructor ( public payload: {id: number}){}
+    constructor ( public payload: {id: number | number}){}
 }
 
 
