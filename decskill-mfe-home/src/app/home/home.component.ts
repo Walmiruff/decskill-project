@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { v4 as uuidv4 } from 'uuid';
 import { delay, take, tap } from 'rxjs';
 
 import { IPost, IUser, StoreService } from '@dcsk/store';
@@ -29,7 +28,7 @@ export class HomeComponent implements OnInit {
     this.loading = true;
     const post: IPost = {
       content: contentMsg,
-      id: uuidv4(),
+      id: this.generateUniqueId(),
       date: new Date(),
       userId: this.userActive.id,
     };
@@ -52,4 +51,11 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+
+  generateUniqueId(): string {
+    const timestamp = new Date().getTime().toString(36);
+    const randomChars = Math.random().toString(36).substring(2);
+    return timestamp + randomChars;
+  }
+  
 }
