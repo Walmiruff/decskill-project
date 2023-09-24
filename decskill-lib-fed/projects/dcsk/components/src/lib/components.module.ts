@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SideBarModule } from './sidebar/sidebar.module';
+import { PostModule } from './post/post.module';
 
 
 
@@ -7,10 +8,12 @@ import { SideBarModule } from './sidebar/sidebar.module';
   declarations: [
   ],
   imports: [
-    SideBarModule
+    SideBarModule,
+    PostModule
   ],
   exports: [
-    SideBarModule
+    SideBarModule,
+    PostModule
   ]
 })
 export class ComponentsModule { }
