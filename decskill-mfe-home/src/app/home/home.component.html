@@ -10,5 +10,13 @@
 </div>
 
 <ng-container>
-    <dcsk-post [user$]="userActive$"></dcsk-post>
+    <dcsk-post
+               [user]="userActive"
+               [loading]="loading"
+               [inputText]="clearInput"
+               (eventPost)="postTweet($event)"></dcsk-post>
 </ng-container>
+
+<pre>
+    {{ posts?.reverse() | json }}
+</pre>

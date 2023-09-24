@@ -1,7 +1,7 @@
 
 <div class="container-fluid mt-3">
     <div class="row" style="margin-left: 0px;">
-        <div *ngIf="user$ | async as user" class="col-1 mb-2 d-flex justify-content-between align-items-top px-0" style="width: 40px;">
+        <div class="col-1 mb-2 d-flex justify-content-between align-items-top px-0" style="width: 40px;">
             <img [src]="user.photo" alt="hugenerd" width="30" height="30" class="rounded-circle">
         </div>
         <div class="col-11 px-0">
@@ -97,7 +97,7 @@
                     <!-- Tweet Button -->
                     <div class="align-items-end">
                         <div class="d-flex justify-content-between align-items-center">
-                            <small class="mx-2">{{ 130 - inputText.length }}</small>
+                            <small class="mx-2">{{ 130 - inputText?.length }}</small>
                             <button
                               class="btn btn-primary btn-sm rounded-pill"
                               type="button"

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class SidebarComponent {
 
-  @Input() user$!: Observable<IUser>;
+  @Input() user!:IUser;
   @Output() eventRouter = new EventEmitter<string>();
   @Output() changeUser = new EventEmitter<number>();
 

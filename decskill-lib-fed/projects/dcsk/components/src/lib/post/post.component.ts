@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class PostComponent {
 
   public rows: number = 1;
-  @Input() user$!: Observable<IUser>;
+  @Input() user!: IUser;
   @Input() inputText: string = '';
   @Input() loading: boolean = false;
   @Output() eventPost = new EventEmitter<string>();
