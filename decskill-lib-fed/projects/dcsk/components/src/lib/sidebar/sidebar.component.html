@@ -1,20 +1,19 @@
-<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100"
-    style="border-right: 1px solid whitesmoke;">
+<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 border-r">
     <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto  text-decoration-none">
         <i class="fs-4 bi-twitter"></i>
     </a>
     <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
         <li class="nav-item">
-            <a class="nav-link align-middle px-0">
+            <a class="nav-link align-middle px-0" (click)="onClick('/')">
                 <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Página Inicial</span>
             </a>
         </li>
         <li>
-            <a class="nav-link px-0 align-middle">
+            <a class="nav-link px-0 align-middle"  (click)="onClick('/explore')">
                 <i class="fs-4 bi-search"></i> <span class="ms-1 d-none d-sm-inline">Explorar</span></a>
         </li>
         <li>
-            <a class="nav-link px-0 align-middle" style="cursor: pointer;">
+            <a class="nav-link px-0 align-middle" (click)="onClick('')">
                 <i class="fs-4 bi-bell"></i> <span class="ms-1 d-none d-sm-inline">Notificações</span> </a>
         </li>
     </ul>
