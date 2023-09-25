@@ -4,7 +4,7 @@
 root_dir=$(pwd)
 
 # Diretório do Host
-spa1_dir="$root_dir/decskill-spa-root"
+spa1_dir="$root_dir"
 
 # Diretório do MFE Explore
 spa2_dir="$root_dir/../decskill-mfe-explore"
