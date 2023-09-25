@@ -1,6 +1,7 @@
 /*
  * Public API Surface of components
  */
+export * from './lib/pipes/time-ago.pipe';
 export * from './lib/timeline/timeline.component';
 export * from './lib/timeline/timeline.module';
 export * from './lib/post/post.component';
