@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "install:all": "bash install.sh",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
     "start:mfes": "bash start.sh",
     "install:dcsk-components": "rm -rf node_modules/@dcsk/components && npm install ../decskill-lib-fed/dist/dcsk/components/dcsk-components-0.0.21.tgz --force --ignore-scripts",
