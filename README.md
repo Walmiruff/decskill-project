@@ -22,7 +22,7 @@ Para iniciar o projeto, siga os seguintes passos:
     npm run start:all
 
 
-Isso iniciará as seguintes aplicações em portas específicas:
+Isso iniciará as seguintes aplicações em portas específicas a aplicação ficará servida em http://localhost:4200/:
 
 - decskill-spa-root (Porta 4200)
 - decskill-mfe-home (Porta 5000)
