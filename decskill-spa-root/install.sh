@@ -17,7 +17,7 @@ install_spa() {
   local spa_name="$1"
   local spa_dir="$2"
 
-  echo "Iniciando $spa_name em $spa_dir..."
+  echo "Instalando $spa_name em $spa_dir..."
   cd "$spa_dir" || exit
   npm install
 }
