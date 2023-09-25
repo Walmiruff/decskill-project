@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { delay, take, tap } from 'rxjs';
 
 import { IPost, IUser, StoreService } from '@dcsk/store';
@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
   public loading: boolean = false;
   public clearInput!: string;
   public posts!: IPost[];
+  public postId: string = '';
+  @ViewChild('myModal') myModal!: ElementRef;
 
   constructor(
     private storeService: StoreService
@@ -21,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateTimeline();
-   this.storeService.getUser().subscribe(user => this.userActive = user);
+    this.storeService.getUser().subscribe(user => this.userActive = user);
   }
 
   postTweet(contentMsg: any) {
@@ -34,23 +36,23 @@ export class HomeComponent implements OnInit {
       user: this.userActive
     };
     this.storeService.addPost(post);
-    
+
     this.updateTimeline();
   }
 
   updateTimeline() {
     this.storeService.getPosts()
-    .pipe(
-      delay(1000),
-      tap(() =>  this.loading = false),
-      take(1)
-    ).subscribe(
-      {
-        next: (postsResp: IPost[]) => this.posts = postsResp,
-        error: (err: any): void => {},
-        complete: () => this.clearInput = ''
-      }
-    );
+      .pipe(
+        delay(1000),
+        tap(() => this.loading = false),
+        take(1)
+      ).subscribe(
+        {
+          next: (postsResp: IPost[]) => this.posts = postsResp,
+          error: (err: any): void => { },
+          complete: () => this.clearInput = ''
+        }
+      );
   }
 
   generateUniqueId(): string {
@@ -61,8 +63,14 @@ export class HomeComponent implements OnInit {
 
 
   deleteTweet(id: any) {
-
+    this.myModal.nativeElement.click();
+    this.postId = id
   }
-  
-  
+
+  onDelete() {
+    this.storeService.deletePost(this.postId);
+    this.updateTimeline();
+  }
+
+
 }

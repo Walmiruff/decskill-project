@@ -18,3 +18,32 @@
 <ng-container>
     <dcsk-timeline [posts]="posts" (eventDelete)="deleteTweet($event)"></dcsk-timeline>
 </ng-container>
+
+
+<!-- Button to trigger the modal -->
+<button #myModal type="button" hidden class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+</button>
+  
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Excluir post?</h4>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body">
+            Isso não pode ser desfeito e será removido do seu perfil, da linha do tempo de todas as contas que o seguem e dos resultados da pesquisa. 
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger btn-md rounded-pill" data-bs-dismiss="modal" (click)="onDelete()">Excluir</button>
+          <button type="button" class="btn btn-light btn-md rounded-pill" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
