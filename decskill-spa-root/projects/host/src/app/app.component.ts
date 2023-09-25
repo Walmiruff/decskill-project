@@ -13,13 +13,15 @@ export class AppComponent implements OnInit {
 
   private user1: IUser = {
         id: 1,
-        name: '@poloConghiale',
+        name: 'Marl Otto',
+        tag: '@poloConghiale',
         photo: 'https://github.com/mdo.png'
   };
 
   private user2: IUser = {
     id: 2,
-    name: '@quotesGOT10',
+    name: 'Walmir Castro',
+    tag: '@quotesGOT10',
     photo: 'https://github.com/Walmiruff.png'
 };
 
@@ -29,9 +31,10 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private storeService: StoreService
-    ) { }
 
+    ) { }
   public ngOnInit(): void {
+    this.storeService.addUser(this.user1);
     this.userActive$ = this.storeService.getUser();
   }
 

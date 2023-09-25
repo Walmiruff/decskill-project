@@ -97,11 +97,11 @@
                     <!-- Tweet Button -->
                     <div class="align-items-end">
                         <div class="d-flex justify-content-between align-items-center">
-                            <small class="mx-2" *ngIf="!!inputText">{{ 130 - inputText.length }}</small>
+                            <small *ngIf="!!inputText" class="mx-2">{{ 130 - inputText.length }}</small>
                             <button
                               class="btn btn-primary btn-sm rounded-pill"
                               type="button"
-                              [disabled]="inputText.length === 0 || loading"
+                              [disabled]="inputText == '' || loading"
                               (click)="onSubmit(inputText)"
                             >
                               Tweetar

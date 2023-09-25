@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
       id: this.generateUniqueId(),
       date: new Date(),
       userId: this.userActive.id,
+      user: this.userActive
     };
     this.storeService.addPost(post);
     
@@ -57,5 +58,11 @@ export class HomeComponent implements OnInit {
     const randomChars = Math.random().toString(36).substring(2);
     return timestamp + randomChars;
   }
+
+
+  deleteTweet(id: any) {
+
+  }
+  
   
 }

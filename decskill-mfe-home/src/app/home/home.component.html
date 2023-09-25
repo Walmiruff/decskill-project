@@ -9,14 +9,12 @@
     </div>
 </div>
 
-<ng-container>
-    <dcsk-post
-               [user]="userActive"
-               [loading]="loading"
-               [inputText]="clearInput"
-               (eventPost)="postTweet($event)"></dcsk-post>
+<ng-container class="mb-2">
+    <dcsk-post [user]="userActive" [loading]="loading" [inputText]="clearInput"
+        (eventPost)="postTweet($event)"></dcsk-post>
 </ng-container>
 
-<pre>
-    {{ posts?.reverse() | json }}
-</pre>
+
+<ng-container>
+    <dcsk-timeline [posts]="posts" (eventDelete)="deleteTweet($event)"></dcsk-timeline>
+</ng-container>

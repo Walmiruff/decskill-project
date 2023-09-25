@@ -10,7 +10,8 @@ import { IPost } from '../models/post.model';
 export class StoreService {
   private user1: IUser = {
     id: 1,
-    name: '@poloConghiale',
+    name: 'Marl Otto',
+    tag: '@poloConghiale',
     photo: 'https://github.com/mdo.png'
 };
   private userSubject: BehaviorSubject<IUser> = new BehaviorSubject<IUser>(this.user1);
@@ -59,10 +60,10 @@ export class StoreService {
 
   // Carregar do localStorage
   private loadFromLocalStorage(): void {
-    const user = JSON.parse(localStorage.getItem('user') || '[]');
+    const user = JSON.parse(localStorage.getItem('user') ?? '[]');
     this.userSubject.next(user);
 
-    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+    const posts = JSON.parse(localStorage.getItem('posts') ?? '[]');
     this.postsSubject.next(posts);
   }
 }

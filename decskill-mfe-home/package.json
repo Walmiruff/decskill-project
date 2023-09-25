@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
-    "install:dcsk-components": "rm -rf node_modules/@dcsk/components && npm install ../decskill-lib-fed/dist/dcsk/components/dcsk-components-0.0.9.tgz --force --ignore-scripts",
-    "install:dcsk-store": "rm -rf node_modules/@dcsk/store && npm install ../decskill-lib-fed/dist/dcsk/store/dcsk-store-0.0.12.tgz --force --ignore-scripts"
+    "install:dcsk-components": "rm -rf node_modules/@dcsk/components && npm install ../decskill-lib-fed/dist/dcsk/components/dcsk-components-0.0.16.tgz --force --ignore-scripts",
+    "install:dcsk-store": "rm -rf node_modules/@dcsk/store && npm install ../decskill-lib-fed/dist/dcsk/store/dcsk-store-0.0.13.tgz --force --ignore-scripts"
   },
   "private": true,
   "dependencies": {
@@ -22,8 +22,8 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "@dcsk/components": "file:../decskill-lib-fed/dist/dcsk/components/dcsk-components-0.0.9.tgz",
-    "@dcsk/store": "file:../decskill-lib-fed/dist/dcsk/store/dcsk-store-0.0.12.tgz",
+    "@dcsk/components": "file:../decskill-lib-fed/dist/dcsk/components/dcsk-components-0.0.16.tgz",
+    "@dcsk/store": "file:../decskill-lib-fed/dist/dcsk/store/dcsk-store-0.0.13.tgz",
     "@ngrx/effects": "^12.5.0",
     "@ngrx/entity": "^12.5.0",
     "@ngrx/store": "^12.5.0",
