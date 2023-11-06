@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { IPost } from '@dcsk/store';
+import { IPost } from '../models/post.model';
 
 @Component({
   selector: 'dcsk-timeline',
