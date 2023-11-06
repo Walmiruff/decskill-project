@@ -1,0 +1,7 @@
+/*
+ * Public API Surface of security
+ */
+export * from './lib/security.service';
+export * from './lib/security.component';
+export * from './lib/security.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2plY3RzL2Rjc2svc2VjdXJpdHkvc3JjL3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLHdCQUF3QixDQUFDO0FBQ3ZDLGNBQWMsMEJBQTBCLENBQUM7QUFDekMsY0FBYyx1QkFBdUIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2Ygc2VjdXJpdHlcbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL2xpYi9zZWN1cml0eS5zZXJ2aWNlJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL3NlY3VyaXR5LmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9zZWN1cml0eS5tb2R1bGUnO1xuIl19

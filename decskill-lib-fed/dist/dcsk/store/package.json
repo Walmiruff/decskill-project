@@ -1,0 +1,21 @@
+{
+  "name": "@dcsk/store",
+  "version": "0.0.13",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "dependencies": {
+    "@ngrx/effects": "^12.5.0",
+    "@ngrx/entity": "^12.5.0",
+    "@ngrx/store": "^12.5.0",
+    "tslib": "^2.3.0"
+  },
+  "main": "bundles/dcsk-store.umd.js",
+  "module": "fesm2015/dcsk-store.js",
+  "es2015": "fesm2015/dcsk-store.js",
+  "esm2015": "esm2015/dcsk-store.js",
+  "fesm2015": "fesm2015/dcsk-store.js",
+  "typings": "dcsk-store.d.ts",
+  "sideEffects": false
+}
